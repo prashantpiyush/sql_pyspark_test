@@ -1,0 +1,126 @@
+{
+  "id" : "pipe1",
+  "metainfo" : {
+    "label" : "pipe1",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    },
+    "sensorSchedule" : {
+      "enabled" : false,
+      "isDefaultView" : false,
+      "triggers" : { }
+    },
+    "isTranspiledPipeline" : false
+  },
+  "processes" : {
+    "8p7kL8-lrA03ReKIiTwhn$$A8__CQgkB5Kpvv_xhii2Y" : {
+      "id" : "8p7kL8-lrA03ReKIiTwhn$$A8__CQgkB5Kpvv_xhii2Y",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "pipe1__Reformat_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "pipe1__Reformat_1"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Reformat_1_W_jlEe9-guoPP7Z61n3Yf$$_opfXXuzm3RPBxsSy1ELD", "8p7kL8-lrA03ReKIiTwhn$$A8__CQgkB5Kpvv_xhii2Y", "O9ya0XZw33FOlzsI0K4jR$$995bLX7f-mmtKQmHJqC5l" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "pipe1__Reformat_1_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "pipe1__Reformat_1_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "1fh7bGE3Mp-1c8iM53-36$$ZTz4WnI2Bqu_3lnsagh-V" : {
+      "id" : "1fh7bGE3Mp-1c8iM53-36$$ZTz4WnI2Bqu_3lnsagh-V",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "pipe1__Reformat_with_random_id",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "pipe1__Reformat_with_random_id"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Reformat_with_random_id_zthh3_2V6cH7ZRxNkaZTm$$6d_EYhjnajuap6GZZTPBN", "1fh7bGE3Mp-1c8iM53-36$$ZTz4WnI2Bqu_3lnsagh-V", "Reformat_1_W_jlEe9-guoPP7Z61n3Yf$$_opfXXuzm3RPBxsSy1ELD" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "pipe1__Reformat_with_random_id_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "pipe1__Reformat_with_random_id_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "MBow_tR6WaGWKFQG3Pngb$$S7d0Amhr9LB40_O_zYIV7" : {
+      "id" : "MBow_tR6WaGWKFQG3Pngb$$S7d0Amhr9LB40_O_zYIV7",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "pipe1__new_reformat",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "pipe1__new_reformat"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "new_reformat_pC-Fjf-67lNGvFnzJ2pwz$$eX7WZj3rYAew_NOuLvLbV", "MBow_tR6WaGWKFQG3Pngb$$S7d0Amhr9LB40_O_zYIV7", "Reformat_1_W_jlEe9-guoPP7Z61n3Yf$$_opfXXuzm3RPBxsSy1ELD" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "pipe1__new_reformat_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "pipe1__new_reformat_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_8p7kL8-lrA03ReKIiTwhn$$A8__CQgkB5Kpvv_xhii2Y_pipe1__Reformat_with_random_id_in_0",
+    "source" : "8p7kL8-lrA03ReKIiTwhn$$A8__CQgkB5Kpvv_xhii2Y",
+    "sourcePort" : "pipe1__Reformat_1_out_0",
+    "target" : "1fh7bGE3Mp-1c8iM53-36$$ZTz4WnI2Bqu_3lnsagh-V",
+    "targetPort" : "pipe1__Reformat_with_random_id_in_0"
+  }, {
+    "id" : "conn_8p7kL8-lrA03ReKIiTwhn$$A8__CQgkB5Kpvv_xhii2Y_pipe1__new_reformat_in_0",
+    "source" : "8p7kL8-lrA03ReKIiTwhn$$A8__CQgkB5Kpvv_xhii2Y",
+    "sourcePort" : "pipe1__Reformat_1_out_0",
+    "target" : "MBow_tR6WaGWKFQG3Pngb$$S7d0Amhr9LB40_O_zYIV7",
+    "targetPort" : "pipe1__new_reformat_in_0"
+  } ],
+  "component" : "Pipeline"
+}

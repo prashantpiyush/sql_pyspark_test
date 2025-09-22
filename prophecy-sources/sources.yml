@@ -1,0 +1,25 @@
+---
+version: 2
+sources:
+- name: "tanmay.piyush_test"
+  database: "tanmay"
+  schema: "piyush_test"
+  tables:
+  - name: "employees"
+    columns:
+    - name: "id"
+      dataType:
+        type: "Integer"
+    - name: "name"
+      dataType:
+        type: "String"
+    - name: "department"
+      dataType:
+        type: "String"
+    - name: "salary"
+      dataType:
+        type: "Double"
+    - name: "join_date"
+      dataType:
+        type: "Date"
+    type: "table"
