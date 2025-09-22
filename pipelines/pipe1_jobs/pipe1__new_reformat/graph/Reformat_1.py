@@ -1,7 +1,15 @@
 from pyspark.sql import *
+
 from pyspark.sql.functions import *
+
 from pyspark.sql.types import *
 
-def Reformat_1(spark: SparkSession) -> DataFrame:
-    # Read from temp table: `tanmay`.`piyush_test`.`pipe1__Reformat_1`
-    return spark.table("`tanmay`.`piyush_test`.`pipe1__Reformat_1`")
+from prophecy.libs import typed_lit
+
+from pipe1_jobs.pipe1__new_reformat.config.ConfigStore import *
+
+from pipe1_jobs.pipe1__new_reformat.udfs.UDFs import *
+
+
+def Reformat_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
+            return in0

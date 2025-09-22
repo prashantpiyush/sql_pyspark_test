@@ -27,139 +27,13 @@
     "isTranspiledPipeline" : false
   },
   "processes" : {
-    "1fh7bGE3Mp-1c8iM53-36$$ZTz4WnI2Bqu_3lnsagh-V" : {
-      "id" : "1fh7bGE3Mp-1c8iM53-36$$ZTz4WnI2Bqu_3lnsagh-V",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "Reformat_with_random_id",
-        "x" : 100,
-        "y" : -20,
-        "phase" : 0
-      },
-      "properties" : {
-        "columnsSelector" : [ "uwvXiRn5PXV2jzbEs0oN7$$OEtu0nw9b6eJrQ5iamKt6##id", "uwvXiRn5PXV2jzbEs0oN7$$OEtu0nw9b6eJrQ5iamKt6##name", "uwvXiRn5PXV2jzbEs0oN7$$OEtu0nw9b6eJrQ5iamKt6##department", "uwvXiRn5PXV2jzbEs0oN7$$OEtu0nw9b6eJrQ5iamKt6##salary", "uwvXiRn5PXV2jzbEs0oN7$$OEtu0nw9b6eJrQ5iamKt6##join_date" ],
-        "expressions" : [ {
-          "expression" : {
-            "expression" : "id"
-          },
-          "alias" : "id",
-          "_row_id" : "983160381"
-        }, {
-          "expression" : {
-            "expression" : "name"
-          },
-          "alias" : "full_name",
-          "_row_id" : "197373482"
-        }, {
-          "expression" : {
-            "expression" : "department"
-          },
-          "alias" : "department",
-          "_row_id" : "758547189"
-        }, {
-          "expression" : {
-            "expression" : "salary"
-          },
-          "alias" : "salary",
-          "_row_id" : "233325642"
-        }, {
-          "expression" : {
-            "expression" : "join_date"
-          },
-          "alias" : "doj",
-          "_row_id" : "1117863213"
-        }, {
-          "expression" : {
-            "expression" : "43.2"
-          },
-          "alias" : "random_id",
-          "_row_id" : "pT0fT2YIU0"
-        } ]
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "uwvXiRn5PXV2jzbEs0oN7$$OEtu0nw9b6eJrQ5iamKt6",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "department",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "salary",
-              "dataType" : {
-                "type" : "Double"
-              }
-            }, {
-              "name" : "join_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            } ]
-          },
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "zthh3_2V6cH7ZRxNkaZTm$$6d_EYhjnajuap6GZZTPBN",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "full_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "department",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "salary",
-              "dataType" : {
-                "type" : "Double"
-              }
-            }, {
-              "name" : "doj",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "random_id",
-              "dataType" : {
-                "type" : "Decimal"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      }
-    },
     "MBow_tR6WaGWKFQG3Pngb$$S7d0Amhr9LB40_O_zYIV7" : {
       "id" : "MBow_tR6WaGWKFQG3Pngb$$S7d0Amhr9LB40_O_zYIV7",
       "component" : "Reformat",
       "metadata" : {
         "label" : "new_reformat",
-        "x" : 100,
-        "y" : -220,
+        "x" : 420,
+        "y" : 20,
         "phase" : 0
       },
       "properties" : {
@@ -243,8 +117,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_1",
-        "x" : -100,
-        "y" : -120,
+        "x" : 220,
+        "y" : 20,
         "phase" : 0
       },
       "properties" : {
@@ -328,8 +202,8 @@
       "component" : "Dataset",
       "metadata" : {
         "label" : "employee_records",
-        "x" : -300,
-        "y" : -120,
+        "x" : 20,
+        "y" : 20,
         "phase" : 0
       },
       "properties" : {
@@ -392,12 +266,6 @@
     "sourcePort" : "L55d1pTfuqQwfUSs7o74_$$JZpXcws-jocE7Ujibcuti",
     "target" : "8p7kL8-lrA03ReKIiTwhn$$A8__CQgkB5Kpvv_xhii2Y",
     "targetPort" : "_GazHEs8fqsuQPDH8YVZx$$pfygD_peJorg2my8Rr4Gh"
-  }, {
-    "id" : "-uKNOULU5uLDmVDUO9cJi",
-    "source" : "8p7kL8-lrA03ReKIiTwhn$$A8__CQgkB5Kpvv_xhii2Y",
-    "sourcePort" : "W_jlEe9-guoPP7Z61n3Yf$$_opfXXuzm3RPBxsSy1ELD",
-    "target" : "1fh7bGE3Mp-1c8iM53-36$$ZTz4WnI2Bqu_3lnsagh-V",
-    "targetPort" : "uwvXiRn5PXV2jzbEs0oN7$$OEtu0nw9b6eJrQ5iamKt6"
   }, {
     "id" : "AL0K8b4wOr5ChfU-HjDhQ",
     "source" : "8p7kL8-lrA03ReKIiTwhn$$A8__CQgkB5Kpvv_xhii2Y",
