@@ -1,10 +1,10 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
-from pipe1_jobs.pipe1__new_reformat.config.ConfigStore import *
-from pipe1_jobs.pipe1__new_reformat.udfs.UDFs import *
+from pipe1__new_reformat.config.ConfigStore import *
+from pipe1__new_reformat.udfs.UDFs import *
 from prophecy.utils import *
-from pipe1_jobs.pipe1__new_reformat.graph import *
+from pipe1__new_reformat.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_employee_records = employee_records(spark)
@@ -23,7 +23,7 @@ def main():
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipe1__new_reformat")
     registerUDFs(spark)
     
-    MetricsCollector.instrument(spark = spark, pipelineId = "pipe1__new_reformat", config = Config)(pipeline)
+    pipeline(spark)
 
 if __name__ == "__main__":
     main()
